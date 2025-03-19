@@ -1,7 +1,8 @@
 import React from "react";
 import Navbar from "./components/navbar";
+import { ChildProps } from "@/types";
 
-const layout = ({ children }) => {
+const layout = ({ children }: ChildProps) => {
   return (
     <div>
       <Navbar />

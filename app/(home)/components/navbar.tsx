@@ -67,7 +67,7 @@ export default function Navbar() {
               href="/"
               className="text-2xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-cyan-200"
             >
-              StoreBlue
+              Spark Shoes
             </Link>
           </motion.div>
           <div className="hidden md:block">

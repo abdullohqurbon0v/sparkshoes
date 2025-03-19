@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Star, ShoppingCart } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Product {
   id: number;
@@ -43,7 +44,7 @@ const reviews: Review[] = [
 const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
-      <section className="relative bg-gradient-to-br from-indigo-600 via-blue-500 to-teal-400 text-white py-24 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-sky-900 to-blue-900 text-white py-24 overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid-pattern.png')] opacity-10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight drop-shadow-lg">
@@ -139,8 +140,6 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
       <footer className="bg-indigo-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
@@ -156,33 +155,36 @@ const HomePage: React.FC = () => {
               <h3 className="text-lg font-semibold mb-4">Меню</h3>
               <ul className="space-y-3 text-sm text-indigo-200">
                 <li>
-                  <a href="/" className="hover:text-teal-300 transition-colors">
+                  <Link
+                    href="/"
+                    className="hover:text-teal-300 transition-colors"
+                  >
                     Главная
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/shop"
                     className="hover:text-teal-300 transition-colors"
                   >
                     Магазин
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/about"
                     className="hover:text-teal-300 transition-colors"
                   >
                     О нас
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/contact"
                     className="hover:text-teal-300 transition-colors"
                   >
                     Контакты
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
